@@ -874,7 +874,7 @@ contract GenArt721 is CustomERC721Metadata {
         string artist;
         string description;
         string website;
-        string license;
+        string license; 
         bool dynamic;
         address payable artistAddress;
         address payable additionalPayee;
