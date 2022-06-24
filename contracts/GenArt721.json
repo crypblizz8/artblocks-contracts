@@ -1,0 +1,149 @@
+{
+    "id": "GenART721",
+    "initial": "Interfaces",
+    "states": {
+        "Interfaces": {
+            "IERC165",
+        }
+    },
+    "Supporting Contracts": {
+        "states": {
+            "ERC165": {},
+            "IERC721": {},
+            "ERC721": {},
+            "IERC721 (enumerable)": {},
+            "CustomERC721MetaData": {}
+        }
+    },
+    "Libraries": {
+        "states": {
+            "Safemath": {},
+            "Address": {},
+            "Counters": {},
+            "Strings": {}
+        }
+    },
+    "GenArt721": {
+        "initial": "events",
+        "states": {
+            "events": {
+                "initial": "Mint",
+                "states": {
+                    "Mint": {}
+                }
+            },
+            "struct": {
+                "initial": "Project",
+                "states": {
+                    "Project": {}
+                }
+            },
+            "mappings": {
+                "initial": "Project --> project",
+                "states": {
+                    "Project --> project": {},
+                    "staticIpfsImageLink": {},
+                    "tokenIdToProjectId": {},
+                    "tokenIdToHashes": {},
+                    "hashToTokenId": {},
+                    "projectIdToTokenIds": {},
+                    "isWhitelisted": {}
+                }
+            },
+            "addresses": {
+                "initial": "admin",
+                "states": {
+                    "admin": {},
+                    "artblocksAddress": {}
+                }
+            },
+            "modifiers": {
+                "initial": "onlyValidTokenId",
+                "states": {
+                    "onlyValidTokenId": {},
+                    "onlyUnlocked": {},
+                    "onlyArtist": {},
+                    "onlyAdmin": {},
+                    "onlyWhitelisted": {},
+                    "onlyArtistOrWhitelisted": {}
+                }
+            },
+            "constructor (CustomERC721Metadata)": {
+                "initial": "_tokenName",
+                "states": {
+                    "_tokenName": {},
+                    "_tokenSymbol": {}
+                }
+            }
+        }
+    },
+    "functions": {
+        "initial": "purchaseTo",
+        "states": {
+            "purchase": {},
+            "purchaseTo": {},
+            "mintToken": {},
+            "_splitFunds": {},
+            "addWhitelisted": {},
+            "toggleProjectIsLocked": {},
+            "removeWhitelisted": {},
+            "toggleProjectIsActive": {},
+            "addProject": {},
+            "View": {
+                "initial": "projectDetails",
+                "states": {
+                    "projectDetails": {},
+                    "projectTokenInfo": {},
+                    "projectScriptInfo": {},
+                    "projectScriptByIndex": {},
+                    "projectURIInfo": {},
+                    "projectShowAllTokens": {},
+                    "tokensOfOwner": {},
+                    "getRoyaltyData": {},
+                    "tokenURI": {}
+                }
+            },
+            "project": {
+                "initial": "script",
+                "states": {
+                    "script": {
+                        "initial": "addProjectScript",
+                        "states": {
+                            "addProjectScript": {},
+                            "updateProjectScriptJSON": {},
+                            "updateProjectBaseURI": {}
+                        }
+                    },
+                    "ipfs": {
+                        "initial": "toggleProjectUseIpfsForStatic",
+                        "states": {
+                            "toggleProjectUseIpfsForStatic": {},
+                            "updateProjectBaseIpfsURI": {},
+                            "overrideTokenDynamicImageWithIpfsLink": {},
+                            "clearTokenIpfsImageUri": {},
+                            "updateProjectIpfsHash": {}
+                        }
+                    },
+                    "updates": {
+                        "initial": "updateProjectArtistName",
+                        "states": {
+                            "updateProjectArtistName": {},
+                            "updateProjectName": {},
+                            "updateProjectAdditionalPayeeInfo": {},
+                            "updateProjectSecondaryMarketRoyaltyPercentage": {},
+                            "updateProjectDescription": {},
+                            "updateProjectWebsite": {},
+                            "updateProjectLicense": {},
+                            "updateProjectMaxInvocations": {},
+                            "updateProjectPricePerTokenInWei": {},
+                            "updateArtblocksAddress": {},
+                            "updateArtblocksPercentage": {},
+                            "updateProjectBaseURI": {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}
